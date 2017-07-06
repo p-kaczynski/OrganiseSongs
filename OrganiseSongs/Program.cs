@@ -99,7 +99,7 @@ namespace OrganiseSongs
 
         private static string GetOrCreateDirectoryPath(string root, string artist, string year, string albumTitle)
         {
-            var path = $@"{SanitizeForPath(root)}\{SanitizeForPath(artist)}\{SanitizeForPath(year)} - {SanitizeForPath(albumTitle)}";
+            var path = $@"{root}\{SanitizeForPath(artist)}\{SanitizeForPath(year)} - {SanitizeForPath(albumTitle)}";
             Directory.CreateDirectory(path);
             return path;
         }
